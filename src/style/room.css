@@ -1,0 +1,88 @@
+@import 'var.css';
+
+.room {
+  display: block;
+  width: 100%;
+  font-family: $font;
+  padding: 13px 12px 14px;
+  margin-bottom: 8px;
+  font-size: 15px;
+  line-height: 17px;
+  border-radius: 4px;
+  background-color: $color-grey;
+  box-sizing: border-box;
+  transition: $transition;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-grey-hover;
+    transition: $transition;
+  }
+
+  &:active {
+    background-color: $color-grey-pressed;
+  }
+
+  @media screen and (min-width: $min-lg) {
+    padding: 10px;
+    margin-bottom: 8px;
+    font-size: 13px;
+    line-height: 17px;
+  }
+}
+
+.room:last-child {
+  margin-bottom: 0;
+}
+
+.room_picked {
+  background-color: $color-blue;
+  color: white;
+
+  &:hover {
+    background-color: $color-blue-hover;
+  }
+
+  &:active {
+    background-color: $color-blue-pressed;
+  }
+}
+
+.room__time {
+  display: inline-block;
+  font-weight: 700;
+}
+
+.room__name {
+  display: inline-block;
+  margin-left: 12px;
+
+  @media screen and (min-width: $min-lg) {
+    margin-left: 16px;
+  }
+}
+
+.room__bullet {
+  display: inline-block;
+  margin: 0 4px;
+}
+
+.room__floor {
+  display: inline-block;
+  position: relative;
+}
+
+.room__close {
+  display: none;
+  float: right;
+  size: 12px;
+  margin-top: 3px;
+
+  @media screen and (min-width: $min-lg) {
+    size: 10px;
+  }
+}
+
+.room_picked .room__close {
+  display: inline-block;
+}

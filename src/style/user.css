@@ -1,0 +1,44 @@
+@import 'var.css';
+
+.user {
+  width: 100%;
+  max-width: 404px;
+  height: 34px;
+  padding: 5px 16px;
+  box-sizing: border-box;
+  font-family: $font;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $color-grey;
+    font-weight: 700;
+  }
+}
+
+.user__img {
+  display: inline-block;
+  size: 24px;
+  float: left;
+  border-radius: 50%;
+}
+
+.user__name {
+  display: inline-block;
+  font-size: 13px;
+  line-height: 24px;
+  margin-left: 8px;
+}
+
+.user__bullet {
+  display: inline-block;
+  margin: 0 4px;
+  font-size: 13px;
+}
+
+.user__floor {
+  display: inline-block;
+  font-size: 13px;
+  line-height: 24px;
+  position: relative;
+  color: $color-grey-dark;
+}

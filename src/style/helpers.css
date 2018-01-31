@@ -1,0 +1,17 @@
+@import 'var.css';
+
+.g-hide-desk {
+  @media screen and (min-width: $min-lg) {
+    display: none;
+  }
+}
+
+.g-hide-mobile {
+  @media screen and (max-width: $max-sm) {
+    display: none;
+  }
+}
+
+.g-align-center {
+  text-align: center;
+}

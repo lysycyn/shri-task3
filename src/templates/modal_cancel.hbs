@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Яндекс переговорки</title>
+</head>
+<body>
+  {{> components/header.hbs no_btn="true"}}
+  {{> components/form.hbs room_picked="true"}}
+  <div class="modal is-active">
+    <div class="modal__overlay">&nbsp;</div>
+    <div class="modal__body">
+      <div class="modal__icon">
+        <i class="icon icon_cancel">&nbsp;</i>
+      </div>
+      <div class="modal__title">Встреча будет удалена безвозвратно</div>
+      <div class="modal__buttons">
+        <button class="modal__btn btn btn_primary btn_grey">Отмена</button>
+        <button class="modal__btn btn btn_primary btn_grey">Удалить</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

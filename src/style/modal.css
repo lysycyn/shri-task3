@@ -1,0 +1,85 @@
+@import 'var.css';
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0,16,33,0.40);
+
+  &.is-active {
+    display: block;
+  }
+}
+
+.modal__overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.modal__body {
+  position: absolute;
+  bottom: 24px;
+  width: 100%;
+  padding: 32px;
+  margin: auto;
+  font-family: $font;
+  background: white;
+  border-radius: 8px;
+  box-sizing: border-box;
+  text-align: center;
+  box-shadow: 0 1px 16px 0 rgba(0,44,92,0.28);
+
+
+
+  @media screen and (min-width: $min-lg) {
+    max-width: 444px;
+    padding: 32px 62px;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+  }
+}
+
+.modal__icon {
+  margin-bottom: 16px;
+}
+
+.modal__title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  margin-bottom: 4px;
+}
+
+.modal__row {
+  font-size: 15px;
+  line-height: 17px;
+  padding-top: 4px;
+}
+
+.modal__date::after {
+  content: ',';
+}
+
+.modal__buttons {
+  margin-top: 32px;
+
+  @media screen and (min-width: $min-lg) {
+    margin-top: 24px;
+  }
+}
+
+.modal__btn {
+  margin-right: 16px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

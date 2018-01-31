@@ -1,0 +1,67 @@
+@import 'var.css';
+
+.participant {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 8px;
+  height: 32px;
+  border-radius: 16px;
+  background-color: $color-grey;
+  transition: $transition;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:hover {
+    background-color: $color-grey-hover;
+    cursor: pointer;
+    transition: $transition;
+  }
+
+  @media screen and (min-width: $min-lg) {
+    width: auto;
+    margin-right: 8px;
+    height: 24px;
+    border-radius: 12px;
+  }
+}
+
+.participant:hover .icon {
+  opacity: 1;
+}
+
+.participant__img {
+  border-radius: 100%;
+  size: 32px;
+  background-color: green;
+  float: left;
+
+  @media screen and (min-width: $min-lg) {
+    size: 24px;
+  }
+}
+
+.participant__name {
+  display: inline-block;
+  margin-left: 8px;
+  margin-right: 12px;
+  max-width: 75%;
+  font-family: $font;
+  font-size: 13px;
+  line-height: 32px;
+  overflow: hidden;
+
+  @media screen and (min-width: $min-lg) {
+    line-height: 24px;
+  }
+}
+
+.participant__close {
+  float: right;
+  size: 32px;
+
+  @media screen and (min-width: $min-lg) {
+    size: 24px;
+  }
+}

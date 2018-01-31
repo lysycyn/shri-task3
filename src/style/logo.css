@@ -1,0 +1,12 @@
+@import 'var.css';
+
+.logo {
+  display: block;
+  size: 149px 21px;
+  background-image: url('../assets/logo.svg');
+  background-size: cover;
+
+  @media screen and (min-width: $min-lg) {
+    size: 174px 25px;
+  }
+}

@@ -1,0 +1,49 @@
+@import 'var.css';
+
+.day-picker {
+  position: relative;
+  font-family: $font;
+  font-size: 15px;
+  line-height: 18px;
+  width: 100%;
+  padding: 14px 0;
+  text-align: center;
+
+  @media screen and (max-width: $max-sm) {
+    padding: 19px 0;
+  }
+}
+
+  .day-picker__day {
+
+  }
+
+  .day-picker__divider {
+    display: inline-block;
+    margin: 0 3px;
+  }
+
+  .day-picker__week-day {
+
+  }
+
+  .day-picker__next {
+    position: absolute;
+    top: 11px;
+    right: 16px;
+
+    @media screen and (max-width: $max-sm) {
+      top: 12px;
+    }
+  }
+
+
+  .day-picker__prev {
+    position: absolute;
+    top: 11px;
+    left: 16px;
+
+    @media screen and (min-width: $min-lg) {
+      top: 12px;
+    }
+  }

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Яндекс переговорки</title>
+</head>
+<body>
+  {{> components/header.hbs no_btn="true"}}
+  {{> components/form.hbs room_picked="true"}}
+  <div class="modal is-active">
+    <div class="modal__overlay">&nbsp;</div>
+    <div class="modal__body">
+      <div class="modal__icon">
+        <i class="icon icon_success">&nbsp;</i>
+      </div>
+      <div class="modal__title">Встреча создана!</div>
+      <div class="modal__row">
+        <span class="modal__date">14 декабря</span>
+        <span class="modal__time">15:00 &mdash; 17:00</span>
+      </div>
+      <div class="modal__row">
+        <span class="modal__room">Готем</span>
+        <span class="modal__bullet">&#8226;</span>
+        <span class="modal__floor">4 этаж</span>
+      </div>
+      <div class="modal__buttons">
+        <div class="modal__btn">
+          <button class="btn btn_primary btn_blue">Хорошо</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

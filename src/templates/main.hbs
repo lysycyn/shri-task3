@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Яндекс переговорки</title>
+</head>
+<body>
+  {{> components/header.hbs}}
+  <div class="tooltip">
+    <span class="tooltip__arrow">&nbsp;</span>
+    <span class="tooltip__edit">
+      <button class="btn btn_round btn_grey">
+        <span class="btn__icon">
+          <i class="icon icon_edit">&nbsp;</i>
+        </span>
+      </button>
+    </span>
+    <div class="tooltip__title">Рассуждения о высоком</div>
+    <div class="tooltip__text">
+      <span class="tooltip__date">14 декабря</span>
+      <span class="tooltip__time">15:00 - 17:00</span>
+      <span class="tooltip__bullet">&#8226;</span>
+      <span class="tooltip__room">Жёлтый дом</span>
+    </div>
+    <div class="tooltip__participant">
+      <div class="short-participant">
+        <img class="short-participant__img" src="../assets/dart.jpg" alt="">
+        <span class="shor-participant__name">Дарт Вейдер</span>
+      </div>
+    </div>
+    <div class="tooltip__others">
+      12 участников
+    </div>
+  </div>
+  <div class="main-layout">
+      <div class="main-layout__top">
+        <div class="main-layout__day-picker">
+          <div class="day-picker">
+            <span class="day-picker__prev">
+                <button class="btn btn_round btn_grey">
+                  <span class="btn__icon">
+                    <i class="icon icon_prev">&nbsp;</i>
+                  </span>
+                </button>
+            </span>
+            <span class="day-picker__day">14 дек</span>
+            <span class="day-picker__divider">&#8226;</span>
+            <span class="day-picker__week-day">Сегодня</span>
+            <span class="day-picker__next">
+                <button class="btn btn_round btn_grey">
+                  <span class="btn__icon">
+                    <i class="icon icon_next">&nbsp;</i>
+                  </span>
+                </button>
+            </span>
+          </div>
+        </div>
+        <div class="main-layout__timeline">
+          <div class="timeline">
+              <span class="timeline__current" style="left: 21%">11:05</span>
+              <span class="timeline__hour timeline__hour_past">8</span>
+              <span class="timeline__hour timeline__hour_past">9</span>
+              <span class="timeline__hour timeline__hour_past">10</span>
+              <span class="timeline__hour timeline__hour_past">11</span>
+              <span class="timeline__hour">12</span>
+              <span class="timeline__hour">13</span>
+              <span class="timeline__hour">14</span>
+              <span class="timeline__hour">15</span>
+              <span class="timeline__hour">16</span>
+              <span class="timeline__hour">17</span>
+              <span class="timeline__hour">18</span>
+              <span class="timeline__hour">19</span>
+              <span class="timeline__hour">20</span>
+              <span class="timeline__hour">21</span>
+              <span class="timeline__hour">22</span>
+              <span class="timeline__hour">23</span>
+          </div>
+        </div>
+      </div>
+      <div class="main-layout__body">
+        <div class="calendar">
+          <div class="calendar__row calendar__row_header">
+              <div class="calendar__header">
+                <div class="timeline">
+                    <span class="timeline__current" style="left: 21%">11:05</span>
+                    <span class="timeline__hour timeline__hour_past">8</span>
+                    <span class="timeline__hour timeline__hour_past">9</span>
+                    <span class="timeline__hour timeline__hour_past">10</span>
+                    <span class="timeline__hour timeline__hour_past">11</span>
+                    <span class="timeline__hour">12</span>
+                    <span class="timeline__hour">13</span>
+                    <span class="timeline__hour">14</span>
+                    <span class="timeline__hour">15</span>
+                    <span class="timeline__hour">16</span>
+                    <span class="timeline__hour">17</span>
+                    <span class="timeline__hour">18</span>
+                    <span class="timeline__hour">19</span>
+                    <span class="timeline__hour">20</span>
+                    <span class="timeline__hour">21</span>
+                    <span class="timeline__hour">22</span>
+                    <span class="timeline__hour">23</span>
+                </div>
+              </div>
+            </div>
+              <div class="calendar__row calendar__row_floor">
+                  <div class="calendar__room">
+                      7 этаж
+                  </div>
+                  <div class="calendar__timeline"></div>
+              </div>
+
+              <div class="calendar__row">
+                  <div class="calendar__room calendar__room_disabled">
+                      <div class="calendar__name">Ржавый Фред</div>
+                      <div class="calendar__capacity">3&dash;6 человек</div>
+                  </div>
+                  <div class="calendar__timeline"></div>
+              </div>
+
+              <div class="calendar__row">
+                  <div class="calendar__room">
+                      <div class="calendar__name">Прачечная</div>
+                      <div class="calendar__capacity">до 10 человек</div>
+                  </div>
+                  <div class="calendar__timeline">
+                      <div class="calendar__meetup" style="left: 0; width: 6.25%"></div>
+                      <div class="calendar__meetup" style="left: 6.25%; width: 12.5%"></div>
+                      <div class="calendar__meetup" style="left: 25%; width: 3.125%"></div>
+                      <div class="calendar__new" style="left: 29%;"></div>
+                  </div>
+              </div>
+
+              <div class="calendar__row">
+                  <div class="calendar__room  calendar__room_active">
+                      <div class="calendar__name">Желтый дом</div>
+                      <div class="calendar__capacity">до 10 человек</div>
+                  </div>
+                  <div class="calendar__timeline"></div>
+              </div>
+
+              <div class="calendar__row">
+                  <div class="calendar__room calendar__room_disabled">
+                      <div class="calendar__name">Оранжевый тюльпан</div>
+                      <div class="calendar__capacity">до 10 человек</div>
+                  </div>
+                  <div class="calendar__timeline"></div>
+              </div>
+
+              <div class="calendar__row calendar__row_floor">
+                  <div class="calendar__room">
+                      6 этаж
+                  </div>
+                  <div class="calendar__timeline"></div>
+              </div>
+
+              <div class="calendar__row">
+                  <div class="calendar__room">
+                      <div class="calendar__name">Джокер</div>
+                      <div class="calendar__capacity">до 10 человек</div>
+                  </div>
+                  <div class="calendar__timeline"></div>
+              </div>
+
+              <div class="calendar__row">
+                  <div class="calendar__room">
+                      <div class="calendar__name">Мариванна</div>
+                      <div class="calendar__capacity">до 10 человек</div>
+                  </div>
+                  <div class="calendar__timeline"></div>
+              </div>
+
+              <div class="calendar__row">
+                  <div class="calendar__room">
+                      <div class="calendar__name">Тонкий Боб</div>
+                      <div class="calendar__capacity">до 10 человек</div>
+                  </div>
+                  <div class="calendar__timeline"></div>
+              </div>
+
+              <div class="calendar__row">
+                  <div class="calendar__room">
+                      <div class="calendar__name">Черная вдова</div>
+                      <div class="calendar__capacity">до 10 человек</div>
+                  </div>
+                  <div class="calendar__timeline"></div>
+              </div>
+
+              <div class="calendar__row">
+                  <div class="calendar__room">
+                      <div class="calendar__name">Белорусский ликер</div>
+                      <div class="calendar__capacity">до 10 человек</div>
+                  </div>
+                  <div class="calendar__timeline"></div>
+              </div>
+          </div>
+      </div>
+      <div class="main-layout__footer"></div>
+  </div>
+</body>
+</html>

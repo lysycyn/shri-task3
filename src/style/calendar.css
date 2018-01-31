@@ -1,0 +1,164 @@
+@import 'var.css';
+
+.calendar {
+  display: table;
+  width: 100%;
+  position: relative;
+  background-color: $color-grey-bg;
+
+  @media screen and (max-width: $max-sm) {
+    width: 1000px;
+  }
+}
+
+  .calendar__row {
+
+  }
+
+  .calendar__room {
+    background: $color-white;
+    display: table-cell;
+    min-width: 245px;
+    height: 52px;
+    padding-left: 25px;
+    border-right: 1px solid $color-grey;
+    vertical-align: middle;
+    box-sizing: border-box;
+    cursor: pointer;
+
+    @media screen and (max-width: $max-sm) {
+      min-width: 181px;
+      height: 58px;
+    }
+  }
+
+  .calendar__room:hover .calendar__name {
+    color: $color-blue-text-hover;
+    transition: $transition;
+  }
+
+  .calendar__room:active .calendar__name {
+    color: $color-blue-text-pressed;
+    transition: $transition;
+  }
+
+    .calendar__room_disabled,
+    .calendar__room_disabled:hover .calendar__name,
+    .calendar__room_disabled:active .calendar__name  {
+      color: $color-grey-dark;
+      cursor: default;
+    }
+
+    .calendar__row_floor .calendar__room {
+      vertical-align: bottom;
+      cursor: default;
+    }
+
+    .calendar__row_header {
+      @media screen and (min-width: $min-lg) {
+        display: none;
+      }
+    }
+
+
+  .calendar__timeline {
+      display: table-cell;
+      width: 100%;
+      position: relative;
+      height: 100%;
+      background: $color-white;
+      border-top: 12px solid $color-grey-bg;
+      border-bottom: 12px solid $color-grey-bg;
+  }
+
+      .calendar__row_floor .calendar__timeline{
+          background: $color-grey-bg;
+      }
+
+      .calendar__row_floor .calendar__room {
+        height: 29px;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.4px;
+        text-transform: uppercase;
+        color: $color-grey-dark;
+
+        @media screen and (max-width: $max-sm) {
+          height: 45px;
+        }
+      }
+
+      .calendar__row_floor:nth-child(2) .calendar__room {
+        height: 35px;
+
+        @media screen and (max-width: $max-sm) {
+          height: 37px;
+        }
+      }
+
+  .calendar__header {
+      background: $color-white;
+      padding-left: 254px;
+      height: 44px;
+      border-bottom: 1px solid $color-grey;
+
+      @media screen and (max-width: $max-sm) {
+        height: 32px;
+      }
+  }
+
+  .calendar__name {
+      font-weight: medium;
+      font-size: 15px;
+      line-height: 17px;
+      margin-bottom: 2px;
+      transition: $transition;
+  }
+
+      .calendar__room_active .calendar__name {
+          color: $color-blue-text-hover;
+      }
+
+  .calendar__capacity {
+      font-size: 13px;
+      line-height: 17px;
+  }
+
+  .calendar__new {
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+    background: #1D54FE;
+    min-width: 6.25%;
+    color: $color-white;
+    opacity: 1;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: $transition;
+  }
+
+  .calendar__new:active {
+    background: #1D00FE;
+    transition: $transition;
+  }
+
+    .calendar__new:before {
+        content: "+";
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+    }
+
+  .calendar__meetup {
+      border-radius: 2px;
+      background: #D5DFE9;
+      height: 100%;
+      display: inline-block;
+      min-width: 3.125%;
+      position: absolute;
+  }
+
+      .calendar__meetup:nth-child(2n) {
+          opacity: 0.7;
+      }

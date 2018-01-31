@@ -1,0 +1,43 @@
+@import 'var.css';
+
+.header {
+  position: fixed;
+  z-index: 1;
+  padding: 15px 16px 11px;
+  width: 100%;
+  top: 0;
+  border-bottom: 1px solid $color-grey;
+  background-color: white;
+  box-sizing: border-box;
+
+  @media screen and (min-width: $min-lg) {
+    padding: 16px 25px;
+  }
+
+  &_no-btn &__btn * {
+    display: none;
+  }
+}
+
+.header__table {
+  width: 100%;
+  border-collapse: collapse;
+  border: none;
+
+  td {
+    width: 50%;
+  }
+}
+
+.header__logo {
+  float: left;
+}
+
+.header__btn {
+  float: right;
+  min-height: 34px;
+
+  @media screen and (min-width: $min-lg) {
+    min-height: 36px;
+  }
+}

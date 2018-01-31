@@ -1,0 +1,94 @@
+<div class="form">
+  <div class="form__row">
+    <div class="form__container">
+      {{#if room_picked}}
+        <div class="form__title">Редактирование встречи</div>
+      {{else}}
+        <div class="form__title">Новая встреча</div>
+      {{/if}}
+      <div class="form__close">
+        <button class="btn btn_round btn_grey g-hide-mobile">
+          <span class="btn__icon">
+            <i class="icon icon_close">&nbsp;</i>
+          </span>
+        </button>
+      </div>
+      <div class="form__field form__field_lg">
+        <div class="form__label">Тема</div>
+        <input type="text" class="form__input input" placeholder="О чём будем говорить?">
+      </div>
+      <div class="form__field form__field_md">
+        <div class="form__label">Дата<span class="g-hide-desk"> и время</span></div>
+        <input type="text" class="form__input input form__input_date">
+        <span class="form__input-icon">
+          <i class="icon icon_calendar">&nbsp;</i>
+        </span>
+      </div>
+      <div class="form__field form__field_sm">
+        <div class="form__label g-hide-mobile">Начало</div>
+        <input type="text" class="form__input input">
+      </div>
+      <i class="form__dash">&mdash;</i>
+      <div class="form__field form__field_sm">
+        <div class="form__label g-hide-mobile">Конец</div>
+        <input type="text" class="form__input input">
+      </div>
+    </div>
+  </div>
+  <div class="form__row">
+    <div class="form__container">
+      <div class="form__field form__field_lg">
+        <div class="form__label">Участники</div>
+        <div class="dropdown">
+          <input type="text" class="form__input input" placeholder="Например, Тор Одинович">
+          <div class="dropdown__list">
+            {{> user.hbs i="../../assets/lex.jpg" n="Лекс Лютер" f="4 этаж"}}
+            {{> user.hbs i="../../assets/neo.jpg" n="Томас Андерсон" f="2 этаж"}}
+            {{> user.hbs i="../../assets/dart.jpg" n="Дарт Вейдер" f="1 этаж"}}
+            {{> user.hbs i="../../assets/klark.jpg" n="Кларк Кент" f="2 этаж"}}
+            {{> user.hbs i="../../assets/dart.jpg" n="Дарт Вейдер" f="1 этаж"}}
+            {{> user.hbs i="../../assets/klark.jpg" n="Кларк Кент" f="2 этаж"}}
+          </div>
+        </div>
+        <div class="form__participant-list">
+          {{> participant.hbs i="../../assets/lex.jpg" n="Лекс Лютер"}}
+          {{> participant.hbs i="../../assets/neo.jpg" n="Томас Андерсон"}}
+          {{> participant.hbs i="../../assets/dart.jpg" n="Дарт Вейдер"}}
+        </div>
+      </div>
+      <div class="form__field form__field_lg form__field_no-margin">
+        {{#if room_picked}}
+          <div class="form__label">Ваша переговорка</div>
+          <div class="form__room-list">
+            {{> room.hbs t="16:00 - 16:30" n="Готем" f="4 этаж" room_picked="true"}}
+          </div>
+        {{else}}
+          <div class="form__label">Рекомендованные переговорки</div>
+          <div class="form__room-list">
+            {{> room.hbs t="16:00 - 16:30" n="Готем" f="4 этаж"}}
+            {{> room.hbs t="16:00 - 16:30" n="Поле непаханное" f="4 этаж"}}
+            {{> room.hbs t="16:00 - 16:30" n="Тёмная башня" f="4 этаж"}}
+          </div>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+  {{#if room_picked}}
+    <div class="form__row form__row_no-padding g-hide-desk g-align-center">
+      <button class="btn btn_primary btn_color-red btn_transparent">Удалить встречу</button>
+    </div>
+    <div class="form__footer">
+      <button class="form__btn btn btn_primary btn_grey">Отмена</button>
+      <button class="form__btn btn btn_primary btn_grey g-hide-mobile">Удалить встречу</button>
+      <button class="form__btn btn btn_primary btn_blue">Сохранить</button>
+    </div>
+  {{else}}
+    <div class="form__footer">
+      <div class="form__disclaimer g-hide-desk">
+        Выберите переговорку
+      </div>
+      <button class="form__btn btn btn_primary btn_grey">Отмена</button>
+      <button class="form__btn btn btn_primary btn_blue">Создать встречу</button>
+    </div>
+  {{/if}}
+</div>

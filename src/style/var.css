@@ -1,0 +1,18 @@
+$min-lg: 904px;
+$max-sm: 903px;
+$color-white: #FFFFFF;
+$color-grey: #E9ECEF;
+$color-grey-dark: #858E98;
+$color-grey-hover: #DDE0E4;
+$color-grey-pressed: #C7CDD3;
+$color-grey-bg: #F6F7F9;
+$color-blue: #007DFF;
+$color-blue-hover: #0059FF;
+$color-blue-text-hover: #0070E0;
+$color-blue-text-pressed: #1D54FE;
+$color-blue-pressed: rgba(11, 0, 250, 0.8);
+
+$transition: 0.6s;
+$gutter: 16px;
+
+$font: Helvetica Neue, Open Sans;
