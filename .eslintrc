@@ -1,0 +1,16 @@
+{
+  "extends": "airbnb-base",
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    "class-methods-use-this": 0,
+    "no-nested-ternary": 0,
+    "max-len": ["error", { "code": 120 }],
+    "no-underscore-dangle": 0,
+    "no-console": 0,
+    "no-plusplus": 0,
+    "indent": ["error", 4],
+    "import/no-extraneous-dependencies": "true",
+  }
+}

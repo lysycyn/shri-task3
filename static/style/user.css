@@ -1,0 +1,56 @@
+@import 'var.css';
+
+.user {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 404px;
+  height: 34px;
+  padding: 5px 16px;
+
+  font-family: $font;
+
+  &:hover {
+    cursor: pointer;
+
+    background-color: $color-grey;
+
+    font-weight: 700;
+  }
+}
+
+.user__img {
+  display: inline-block;
+  float: left;
+
+  border-radius: 50%;
+
+  size: 24px;
+}
+
+.user__name {
+  display: inline-block;
+
+  margin-left: 8px;
+
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.user__bullet {
+  display: inline-block;
+
+  margin: 0 4px;
+
+  font-size: 13px;
+}
+
+.user__floor {
+  position: relative;
+
+  display: inline-block;
+
+  color: $color-grey-dark;
+
+  font-size: 13px;
+  line-height: 24px;
+}

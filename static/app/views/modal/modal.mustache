@@ -1,0 +1,27 @@
+<div class="modal js-modal">
+  <div class="modal__overlay js-modal-overlay">&nbsp;</div>
+  <div class="modal__body">
+    <div class="modal__icon">
+      {{#deleteId}}<i class="icon icon_cancel">&nbsp;</i>{{/deleteId}}
+      {{#date}}<i class="icon icon_success">&nbsp;</i>{{/date}}
+    </div>
+    <div class="modal__title">{{#deleteId}}Встреча будет удалена безвозвратно{{/deleteId}}</div>
+    {{#date}}
+      <div class="modal__row">
+        <span class="modal__date">{{date}}</span>
+        <span class="modal__time">{{startTime}} &mdash; {{endTime}}</span>
+      </div>
+      <div class="modal__row">
+        <span class="modal__room">{{room}}</span>
+        <span class="modal__bullet">&#8226;</span>
+        <span class="modal__floor">{{floor}} этаж</span>
+      </div>
+    {{/date}}
+    <div class="modal__buttons">
+      {{#deleteId}}
+        <button class="modal__btn btn btn_primary btn_grey js-modal-cancel">Отмена</button>
+        <button class="modal__btn btn btn_primary btn_grey js-modal-delete-event" data-event-id={{deleteId}}>Удалить</button>
+      {{/deleteId}}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,101 @@
+@import 'var.css';
+
+.btn {
+  display: inline-block;
+}
+
+btn:hover {
+  cursor: pointer;
+}
+
+  .btn__icon {
+    transition: opacity $transition;
+    pointer-events: none;
+    opacity: 0.2;
+  }
+
+  .btn:hover .btn__icon {
+    transition: opacity $transition;
+
+    opacity: 1;
+  }
+
+  .btn_round {
+    border-radius: 100%;
+
+    size: 24px;
+
+    @media screen and (max-width: $max-sm) {
+      size: 32px;
+    }
+  }
+
+  .btn_primary {
+    padding: 10px 16px;
+
+    letter-spacing: 0;
+
+    border-radius: 4px;
+
+    font-size: 13px;
+    line-height: 16px;
+
+    @media screen and (max-width: $max-sm) {
+      padding: 13px 24px;
+
+      font-size: 15px;
+      line-height: 18px;
+    }
+  }
+
+  .btn_small {
+    @media screen and (max-width: $max-sm) {
+      padding: 8px;
+    }
+  }
+
+  .btn_blue {
+    transition: background $transition;
+
+    color: $color-white;
+    background-color: $color-blue;
+
+    &:hover {
+      transition: background $transition;
+
+      background-color: $color-blue-hover;
+    }
+
+    &:active {
+      background-color: $color-blue-pressed;
+    }
+  }
+
+  .btn_grey {
+    transition: background $transition;
+
+    color: black;
+    background-color: $color-grey;
+
+    &:hover {
+      transition: background $transition;
+
+      background-color: $color-grey-hover;
+    }
+
+    &:active {
+      background-color: $color-grey-pressed;
+    }
+  }
+
+  .btn_no-hover:hover {
+    cursor: default;
+  }
+
+  .btn_color-red {
+    color: red;
+  }
+
+  .btn_transparent {
+    background-color: transparent;
+  }

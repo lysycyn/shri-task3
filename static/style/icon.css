@@ -1,0 +1,62 @@
+@import 'var.css';
+
+.icon {
+  display: inline-block;
+
+  vertical-align: middle;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  size: 12px;
+
+  @media screen and (min-width: $min-lg) {
+    size: 10px;
+  }
+}
+
+.icon_close {
+  background-image: url('../assets/icon_close.svg');
+}
+
+.icon_close-white {
+  background-image: url('../assets/icon_close_white.svg');
+}
+
+.icon_edit {
+  background-image: url('../assets/icon_edit.svg');
+}
+
+.icon_success {
+  background-image: url('../assets/icon_success.svg');
+  background-size: 40px 48px;
+
+  size: 40px 48px;
+}
+
+.icon_cancel {
+  background-image: url('../assets/icon_cancel.svg');
+  background-size: 40px 48px;
+
+  size: 40px 48px;
+}
+
+.icon_calendar {
+  background-image: url('../assets/icon_calendar.svg');
+
+  size: 12px;
+}
+
+.icon_next {
+  background-image: url('../assets/icon_arrow.svg');
+  background-size: 7px 11px;
+}
+
+.icon_prev {
+  transform: rotate(180deg);
+
+  background-image: url('../assets/icon_arrow.svg');
+  background-size: 7px 11px;
+  background-position: top center;
+}

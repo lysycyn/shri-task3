@@ -1,0 +1,54 @@
+@import 'var.css';
+
+.date-picker {
+  position: relative;
+
+  width: 100%;
+  padding: 14px 0;
+
+  text-align: center;
+
+  font-family: $font;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 18px;
+
+  @media screen and (max-width: $max-sm) {
+    padding: 19px 0;
+  }
+}
+
+  .date-picker__day {
+
+  }
+
+  .date-picker__divider {
+    display: inline-block;
+
+    margin: 0 3px;
+  }
+
+  .date-picker__week-day {
+
+  }
+
+  .date-picker__next {
+    position: absolute;
+    top: 11px;
+    right: 16px;
+
+    @media screen and (max-width: $max-sm) {
+      top: 12px;
+    }
+  }
+
+
+  .date-picker__prev {
+    position: absolute;
+    top: 11px;
+    left: 16px;
+
+    @media screen and (max-width: $max-sm) {
+      top: 12px;
+    }
+  }

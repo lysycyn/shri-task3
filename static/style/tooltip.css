@@ -1,0 +1,103 @@
+@import 'var.css';
+
+.tooltip {
+  position: absolute;
+  z-index: 2;
+  cursor: default;
+
+  visibility: hidden;
+  opacity: 0;
+  transition: $transition all ease;
+
+  width: 338px;
+  padding: 12px 16px;
+
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 16px 0 rgba(0,44,92,0.28);
+
+  font-family: $font;
+
+  @media screen and (max-width: $max-sm) {
+
+  }
+}
+
+  .tooltip_visible {
+    visibility: visible;
+    opacity: 1;
+    transition: $transition all ease;
+  }
+
+.tooltip__trigger {
+    cursor: pointer;
+}
+
+.tooltip__arrow {
+  position: absolute;
+  top: -8px;
+  left: 354px;
+
+  display: block;
+
+  width: 0;
+  height: 0;
+  margin-left: -6px;
+
+  border-right: 6px solid transparent;
+  border-bottom: 8px solid #ffffff;
+  border-left: 6px solid transparent;
+}
+
+.tooltip__text {
+  width: 100%;
+  margin-bottom: 16px;
+  padding-top: 3px;
+}
+
+.tooltip__edit {
+  float: right;
+}
+
+.tooltip__title {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.tooltip__date {
+  font-size: 13px;
+  line-height: 17px;
+
+  &::after {
+    content: ',';
+  }
+}
+
+.tooltip__time {
+  font-size: 13px;
+  line-height: 17px;
+}
+
+.tooltip__bullet {
+  font-size: 13px;
+  line-height: 17px;
+}
+
+.tooltip__room {
+  font-size: 13px;
+  line-height: 17px;
+}
+
+.tooltip__participant {
+  display: inline-block;
+}
+
+.tooltip__others {
+  display: inline-block;
+
+  color: $color-grey-dark;
+
+  font-size: 13px;
+  line-height: 17px;
+}

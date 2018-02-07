@@ -1,0 +1,103 @@
+@import 'var.css';
+
+.room {
+  position: relative;
+  display: block;
+
+  box-sizing: border-box;
+  width: 100%;
+
+  cursor: pointer;
+  transition: $transition;
+
+  border-radius: 4px;
+  background-color: $color-grey;
+
+  font-family: $font;
+
+
+  margin-bottom: 8px;
+  padding: 10px;
+
+  font-size: 13px;
+  line-height: 17px;
+
+  &:hover {
+    transition: $transition;
+
+    background-color: $color-grey-hover;
+  }
+
+  &:active {
+    background-color: $color-grey-pressed;
+  }
+
+  @media screen and (max-width: $max-sm) {
+    margin-bottom: 8px;
+    padding: 13px 12px 14px;
+
+    font-size: 15px;
+    line-height: 17px;
+  }
+}
+
+.room:last-child {
+  margin-bottom: 0;
+}
+
+.room_picked {
+  color: white;
+  background-color: $color-blue;
+
+  &:hover {
+    background-color: $color-blue-hover;
+  }
+
+  &:active {
+    background-color: $color-blue-pressed;
+  }
+}
+
+.room__time {
+  display: inline-block;
+
+  font-weight: 700;
+}
+
+.room__name {
+  display: inline-block;
+
+  margin-left: 16px;
+
+  @media screen and (min-width: $max-sm) {
+    margin-left: 12px;
+  }
+}
+
+.room__bullet {
+  display: inline-block;
+
+  margin: 0 4px;
+}
+
+.room__floor {
+  position: relative;
+
+  display: inline-block;
+}
+
+.room__close {
+  display: none;
+  position: absolute;
+  right: 6px;
+  top: 6px;
+
+  @media screen and (max-width: $max-sm) {
+    right: 4px;
+    top: 4px;
+  }
+}
+
+.room_picked .room__close {
+  display: inline-block;
+}

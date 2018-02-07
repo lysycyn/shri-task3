@@ -1,0 +1,23 @@
+@import 'var.css';
+
+.short-participant {
+  display: inline-block;
+}
+
+.short-participant__img {
+  display: inline-block;
+  float: left;
+
+  border-radius: 50%;
+  background-color: yellow;
+
+  size: 24px;
+}
+
+.shor-participant__name {
+  padding-left: 8px;
+
+  font-family: $font;
+  font-size: 13px;
+  line-height: 24px;
+}

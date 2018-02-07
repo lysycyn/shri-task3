@@ -1,0 +1,156 @@
+<form class="form js-form">
+  <div class="form__row">
+    <div class="form__container">
+      <div class="form__title">{{#title}}Редактирование встречи{{/title}}{{^title}}Новая встреча{{/title}}</div>
+      <div class="form__close">
+        <button class="btn btn_round btn_grey g-hide-mobile js-form-close" type="button">
+          <span class="btn__icon">
+            <i class="icon icon_close">&nbsp;</i>
+          </span>
+        </button>
+      </div>
+      <div class="form__field form__field_lg">
+        <div class="form__label">Тема</div>
+        <input type="text" class="form__input input" placeholder="О чём будем говорить?" value="{{title}}">
+      </div>
+      <div class="form__field form__field_md">
+        <div class="form__label">Дата<span class="g-hide-desk"> и время</span></div>
+        <input type="text" class="form__input input form__input_date" value="{{date}}">
+        <span class="form__input-icon">
+          <i class="icon icon_calendar">&nbsp;</i>
+        </span>
+      </div>
+      <div class="form__field form__field_sm">
+        <div class="form__label g-hide-mobile">Начало</div>
+        <input type="text" class="form__input input" value="{{startTime}}">
+      </div>
+      <i class="form__dash">&mdash;</i>
+      <div class="form__field form__field_sm">
+        <div class="form__label g-hide-mobile">Конец</div>
+        <input type="text" class="form__input input" value="{{endTime}}">
+      </div>
+    </div>
+  </div>
+  <div class="form__row">
+    <div class="form__container">
+      <div class="form__field form__field_lg">
+        <div class="form__label">Участники</div>
+        <div class="dropdown">
+          <input type="text" class="form__input input" placeholder="Например, Тор Одинович">
+          <div class="dropdown__list js-dropdown-list">
+            {{#users}}
+              <div class="user">
+                <img class="user__img" src="{{avatarUrl}}" alt="Юзер">
+                <span class="user__name">{{login}}</span>
+                <span class="user__bullet">&#8226;</span>
+                <span class="user__floor">{{homeFloor}} этаж</span>
+              </div>
+              <div class="user">
+                <img class="user__img" src="{{avatarUrl}}" alt="Юзер">
+                <span class="user__name">{{login}}</span>
+                <span class="user__bullet">&#8226;</span>
+                <span class="user__floor">{{homeFloor}} этаж</span>
+              </div>
+              <div class="user">
+                <img class="user__img" src="{{avatarUrl}}" alt="Юзер">
+                <span class="user__name">{{login}}</span>
+                <span class="user__bullet">&#8226;</span>
+                <span class="user__floor">{{homeFloor}} этаж</span>
+              </div>
+            {{/users}}
+          </div>
+        </div>
+        <div class="form__participant-list">
+          {{#users}}
+            <div class="participant">
+              <img class="participant__img" src="{{avatarUrl}}"/>
+              <span class="participant__name">{{login}}</span>
+              <button class="btn btn_round participant__close js-delete-user-from-event" type="button">
+                <span class="btn__icon">
+                  <i class="icon icon_close">&nbsp;</i>
+                </span>
+              </button>
+            </div>
+          {{/users}}
+        </div>
+      </div>
+      <div class="form__field form__field_lg form__field_no-margin">
+        {{#room}}
+          <div class="form__label">Ваша переговорка</div>
+          <div class="form__room-list">
+            <div class="room room_picked">
+              <span class="room__time">{{startTime}} &dash; {{endTime}}</span>
+              <span class="room__name">{{title}}</span>
+              <span class="room__bullet">&#8226;</span>
+              <span class="room__floor">{{floor}} этаж</span>
+              <span class="room__close">
+                <button class="btn btn_round" type="button">
+                  <i class="icon icon_close-white">&nbsp;</i>
+                </button>
+              </span>
+            </div>
+          </div>
+        {{/room}}
+        {{^room}}
+          <div class="form__label">Рекомендованные переговорки</div>
+          <div class="form__room-list">
+            <div class="room">
+              <span class="room__time">10:00 &dash; 10:30</span>
+              <span class="room__name">Переговорка 1</span>
+              <span class="room__bullet">&#8226;</span>
+              <span class="room__floor">1 этаж</span>
+              <span class="room__close">
+                <button class="btn btn_round" type="button">
+                  <i class="icon icon_close-white">&nbsp;</i>
+                </button>
+              </span>
+            </div>
+            <div class="room">
+              <span class="room__time">10:00 &dash; 10:30</span>
+              <span class="room__name">Переговорка 2</span>
+              <span class="room__bullet">&#8226;</span>
+              <span class="room__floor">2 этаж</span>
+              <span class="room__close">
+                <button class="btn btn_round" type="button">
+                  <i class="icon icon_close-white">&nbsp;</i>
+                </button>
+              </span>
+            </div>
+            <div class="room">
+              <span class="room__time">10:00 &dash; 10:30</span>
+              <span class="room__name">Переговорка 3</span>
+              <span class="room__bullet">&#8226;</span>
+              <span class="room__floor">3 этаж</span>
+              <span class="room__close">
+                <button class="btn btn_round" type="button">
+                  <i class="icon icon_close-white">&nbsp;</i>
+                </button>
+              </span>
+            </div>
+          </div>
+        {{/room}}
+
+      </div>
+    </div>
+  </div>
+  {{#title}}
+    <div class="form__row form__row_no-padding g-hide-desk g-align-center">
+      <button class="btn btn_primary btn_color-red btn_transparent js-delete-event-btn" type="button" data-event-id="{{id}}">Удалить встречу</button>
+    </div>
+    <div class="form__footer">
+      <button class="form__btn btn btn_primary btn_grey js-form-close" type="button">Отмена</button>
+      <button class="form__btn btn btn_primary btn_grey g-hide-mobile js-delete-event-btn" type="button" data-event-id="{{id}}">Удалить встречу</button>
+      <button class="form__btn btn btn_primary btn_blue js-save-event" type="submit" data-event-id="{{id}}">Сохранить</button>
+    </div>
+  {{/title}}
+  {{^title}}
+    <div class="form__footer">
+      <div class="form__disclaimer g-hide-desk">
+        Выберите переговорку
+      </div>
+      <button class="form__btn btn btn_primary btn_grey js-form-close" type="button">Отмена</button>
+      <button class="form__btn btn btn_primary btn_blue js-create-event" type="submit">Создать встречу</button>
+    </div>
+  {{/title}}
+
+</form>

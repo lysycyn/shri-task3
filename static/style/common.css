@@ -1,0 +1,40 @@
+@import 'var.css';
+
+a, a:hover, a:focus {
+  text-decoration: none;
+
+  color: black;
+}
+
+body {
+  padding-top: 63px;
+
+  @media screen and (min-width: $min-lg) {
+    padding-top: 71px;
+  }
+}
+
+button {
+  cursor: pointer;
+
+  border: none;
+  outline: none;
+  background: transparent;
+
+  &:hover,
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
+
+img {
+  width: 100%;
+}
+
+.clearfix::after {
+  display: block;
+  clear: both;
+
+  content: '';
+}

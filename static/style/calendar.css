@@ -1,0 +1,224 @@
+@import 'var.css';
+
+.calendar {
+  position: relative;
+  overflow: hidden;
+
+  display: table;
+
+  width: 100%;
+
+  background-color: $color-grey-bg;
+
+  @media screen and (max-width: $max-sm) {
+    width: 100%;
+  }
+}
+
+  .calendar__row:not(.calendar__row_header) {
+    @media screen and (max-width: $max-sm) {
+      border-bottom: 2px solid $color-grey-bg;
+    }
+  }
+
+  .calendar__room {
+    display: table-cell;
+
+    box-sizing: border-box;
+    min-width: 245px;
+    height: 52px;
+    padding-left: 25px;
+
+    cursor: pointer;
+    vertical-align: middle;
+
+    border-right: 1px solid $color-grey;
+    background: $color-white;
+
+    @media screen and (max-width: $max-sm) {
+      min-width: 181px;
+      height: 58px;
+    }
+  }
+
+  .calendar__room:hover .calendar__name {
+    transition: $transition;
+
+    color: $color-blue-text-hover;
+  }
+
+  .calendar__room:active .calendar__name {
+    transition: $transition;
+
+    color: $color-blue-text-pressed;
+  }
+
+  .calendar__name_floor:hover,
+  .calendar__name_floor:active {
+    color: $color-grey-dark;
+  }
+
+    .calendar__row_header {
+      position: fixed;
+      top: 119px;
+
+      @media screen and (min-width: $min-lg) {
+        display: none;
+      }
+    }
+
+  .calendar__timeline {
+    position: relative;
+
+    display: table-cell;
+
+    width: 100%;
+    height: 100%;
+
+    border-top: 12px solid $color-grey-bg;
+    border-bottom: 12px solid $color-grey-bg;
+    background: $color-white;
+
+    @media screen and (max-width: $max-sm) {
+      border-top: none;
+      border-bottom: none;
+    }
+  }
+
+    .calendar__row_floor .calendar__timeline {
+      background: $color-grey-bg;
+    }
+
+    .calendar__row_floor .calendar__room {
+      height: 29px;
+
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+
+      @media screen and (max-width: $max-sm) {
+        height: 45px;
+      }
+    }
+
+    .calendar__row_floor .calendar__name {
+      color: $color-grey-dark;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .calendar__row_floor:nth-child(2) .calendar__room {
+      height: 35px;
+
+      @media screen and (max-width: $max-sm) {
+        height: 37px;
+      }
+    }
+
+  .calendar__header {
+    height: 44px;
+    padding-left: 254px;
+
+    border-bottom: 1px solid $color-grey;
+    background: $color-white;
+
+    @media screen and (max-width: $max-sm) {
+      height: 32px;
+    }
+  }
+
+  .calendar__name {
+    margin-bottom: 2px;
+
+    transition: $transition;
+
+    font-size: 15px;
+    font-weight: medium;
+    line-height: 17px;
+  }
+
+  .calendar__room_active .calendar__name {
+    color: $color-blue-text-hover;
+  }
+
+  .calendar__room_disabled,
+  .calendar__room_disabled:hover .calendar__name,
+  .calendar__room_disabled:active .calendar__name {
+    cursor: default;
+
+    color: $color-grey-dark;
+  }
+
+  .calendar__row_floor .calendar__room {
+    cursor: default;
+    vertical-align: bottom;
+    color: $color-grey-dark;
+
+    @media screen and (max-width: $max-sm) {
+      background-color: $color-grey-bg;
+      border-right: none;
+    }
+  }
+
+  .calendar__capacity {
+    font-size: 13px;
+    line-height: 17px;
+  }
+
+  .calendar__new {
+    position: absolute;
+
+    display: inline-block;
+
+    min-width: 6.25%;
+    height: 100%;
+
+    cursor: pointer;
+    transition: $transition;
+
+    opacity: 1;
+    color: $color-white;
+    border-radius: 2px;
+    background: #1d54fe;
+  }
+
+  .calendar__new:active {
+    transition: $transition;
+
+    background: #1d00fe;
+  }
+
+    .calendar__new:before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      content: '+';
+      transform: translate(-50%, -50%);
+    }
+
+  .calendar__meetup {
+    position: absolute;
+
+    display: inline-block;
+
+    min-width: 3.125%;
+    height: 100%;
+
+    border-radius: 2px;
+    background: rgba(213, 223, 233, 1);
+    transition: $transition;
+  }
+
+    .calendar__meetup:nth-child(2n) {
+      background: rgba(213, 223, 233, 0.7);
+    }
+
+    .calendar__meetup:hover {
+      background-color: #98A9B9;
+      transition: $transition;
+    }
+
+    .calendar__meetup:active {
+      background-color: #8594A1;
+      transition: $transition;
+    }

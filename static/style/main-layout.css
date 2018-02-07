@@ -1,0 +1,102 @@
+@import 'var.css';
+
+.main-layout {
+  padding-top: 47px;
+
+  font-family: $font;
+
+  @media screen and (max-width: $max-sm) {
+    padding-top: 56px;
+    overflow: scroll;
+  }
+}
+
+  .main-layout__top {
+    position: fixed;
+    z-index: 2;
+    top: 71px;
+
+    display: table;
+
+    box-sizing: border-box;
+    width: 100%;
+    height: 46px;
+
+    border-bottom: 1px solid $color-grey;
+    background: $color-white;
+
+    @media screen and (max-width: $max-sm) {
+      top: 63px;
+
+      display: block;
+
+      height: 56px;
+    }
+  }
+
+  .main-layout__date-picker {
+    display: table-cell;
+
+    min-width: 245px;
+
+    @media screen and (max-width: $max-sm) {
+      display: block;
+
+      vertical-align: middle;
+    }
+  }
+
+  .main-layout__timeline {
+    display: table-cell;
+
+    width: 100%;
+    margin-left: 0;
+
+    vertical-align: middle;
+
+
+    @media screen and (max-width: $max-sm) {
+      display: none;
+    }
+  }
+
+  .main-layout__timeline-mobile {
+    display: none;
+    @media screen and (max-width: $max-sm) {
+      display: block;
+      width: 1221px;
+      padding-left: 181px;
+      border-bottom: 1px solid $color-grey-bg;
+      box-sizing: border-box;
+    }
+  }
+
+  .main-layout__body {
+    position: relative;
+    overflow: scroll;
+    width: 100%;
+
+    background: $color-white;
+
+    @media screen and (max-width: $max-sm) {
+      width: 1221px;
+    }
+  }
+
+  .main-layout__footer {
+    position: fixed;
+    z-index: 3;
+
+    width: 100%;
+    height: 100vh;
+
+    background: $color-white;
+  }
+
+  .main-layout__form {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 71px;
+    width: 100%;
+  }
